@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,.12);
+}
+
+.navbar {
+    direction: rtl;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 5;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    color: #171717;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background: #FF7A00;
+    transition: .3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover,
+.Mohava h1 span {
+    color: #FF7A00;
+}
+
+.Mohava {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 84%;
+    max-width: 570px;
+    animation: fadeSlide 1.2s ease forwards;
+}
+
+.dic {
+    color: #FF7A00;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    animation: opa 1.2s infinite alternate;
+}
+
+.Mohava h1 {
+    font-size: clamp(32px, 5vw, 68px);
+    line-height: 1.3;
+    color: #171717;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.Mohava p {
+    font-size: 17px;
+    line-height: 2;
+    color: #333;
+    max-width: 480px;
+    margin-bottom: 32px;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translate(-30px, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes opa {
+    0% {
+        color: red;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 25px 5%;
+    }
+
+    .menu {
+        gap: 22px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .Mohava {
+        left: 6%;
+        width: 88%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 450px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 22px 12px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+    .menu{
+        gap: 40px;
+    }
+
+    .menu a::after {
+        height: 2px;
+    }
+
+    .Mohava {
+        left: 5%;
+        width: 90%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .dic {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .Mohava h1 {
+        font-size: clamp(29px, 8vw, 42px);
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .Mohava p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu {
+        gap: 10px 14px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .Mohava h1 {
+        font-size: 28px;
+    }
+}
