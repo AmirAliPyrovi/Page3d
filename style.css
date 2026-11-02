@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
 
 * {
@@ -60,6 +61,7 @@ body {
     font-weight: 700;
     position: relative;
     padding-bottom: 8px;
+    white-space: nowrap;
 }
 
 .menu a::after {
@@ -137,6 +139,7 @@ body {
     }
 }
 
+/* Tablet */
 @media (max-width: 900px) {
     .navbar {
         padding: 25px 5%;
@@ -156,6 +159,7 @@ body {
     }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
     .hero {
         min-height: 450px;
@@ -163,22 +167,22 @@ body {
 
     .navbar {
         justify-content: center;
-        padding: 22px 12px;
+        padding: 22px 5px;
     }
 
     .menu {
         width: 100%;
+        display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 20px;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 30px;
+        white-space: nowrap;
     }
 
     .menu a {
-        font-size: 12px;
+        font-size: 15px;
         padding-bottom: 5px;
-    }
-    .menu{
-        gap: 40px;
     }
 
     .menu a::after {
@@ -207,19 +211,5 @@ body {
         font-size: 14px;
         line-height: 1.8;
         margin: 0 auto 20px;
-    }
-}
-
-@media (max-width: 360px) {
-    .menu {
-        gap: 10px 14px;
-    }
-
-    .menu a {
-        font-size: 11px;
-    }
-
-    .Mohava h1 {
-        font-size: 28px;
     }
 }
