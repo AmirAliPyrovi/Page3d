@@ -52,7 +52,6 @@ body {
 .menu {
     display: flex;
     gap: 40px;
-    text-wrap: nowrap;
 }
 
 .menu a {
@@ -177,12 +176,12 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        gap: 25px;
+        gap: 30px;
         white-space: nowrap;
     }
 
     .menu a {
-        font-size: 13px;
+        font-size: 12px;
         padding-bottom: 5px;
     }
 
